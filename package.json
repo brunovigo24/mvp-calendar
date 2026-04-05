@@ -7,7 +7,8 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsup src/index.ts --format cjs --out-dir dist",
     "start": "node dist/index.js",
-    "migrate": "cat src/db/migrations/001_initial.sql | docker exec -i mvp-calendar-postgres-1 psql -U user -d agendabot"
+    "migrate": "cat src/db/migrations/001_initial.sql | docker exec -i mvp-calendar-postgres-1 psql -U user -d agendabot",
+    "oauth:setup": "tsx scripts/oauth-setup.ts"
   },
   "dependencies": {
     "telegraf": "^4.16.3",
