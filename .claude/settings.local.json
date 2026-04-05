@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(command -v node)",
+      "Read(//usr/local/bin/**)",
+      "Read(//c/Users/bruno/.nvm/**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/bruno/AppData/Roaming/**)",
+      "Bash(wsl which:*)",
+      "Bash(wsl npm:*)",
+      "Bash(wsl bash:*)"
+    ]
+  }
+}
