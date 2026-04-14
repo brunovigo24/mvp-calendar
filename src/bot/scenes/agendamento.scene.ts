@@ -49,7 +49,8 @@ async function stepSlot(ctx: BotContext) {
   let slots: TimeSlot[];
   try {
     slots = await getFreeSlots(SERVICE_DURATIONS[service]);
-  } catch {
+  } catch (err) {
+    console.error('Erro ao buscar slots do Google Calendar:', err);
     await ctx.reply('Não consegui buscar os horários. Tente novamente mais tarde.');
     return ctx.scene.leave();
   }
